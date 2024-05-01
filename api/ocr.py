@@ -1,5 +1,5 @@
 from flask import Blueprint,request
-from ai.ocr.ocr import OCR
+from service.ocr.ocr import OCR
 
 # 创建蓝图ocr_bp
 ocr_bp = Blueprint('ocr', __name__)
