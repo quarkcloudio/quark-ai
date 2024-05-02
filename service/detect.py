@@ -7,7 +7,7 @@ from modelscope.trainers import build_trainer
 class Detect:
 
     # Detect
-    def get_data(url):
+    def get_detect_data(url):
         object_detect = pipeline(Tasks.image_object_detection,model='damo/cv_tinynas_object-detection_damoyolo-t')
         return object_detect(url)
 

@@ -5,17 +5,10 @@ from service.detect import Detect
 detect_bp = Blueprint('detect', __name__)
 
 # 定义路由
-@detect_bp.route('/api/detect/getData', methods=['GET', 'POST'])
+@detect_bp.route('/api/detect', methods=['GET', 'POST'])
 def get_data():
     url = request.args.get('url', '')
     if url == '':
         return 'url is empty'
-
-    # print()
     
-    return Detect.get_data(url)
-
-# 定义路由
-@detect_bp.route('/api/detect/train', methods=['GET'])
-def train():
-    return Detect.train()
+    return Detect.get_detect_data(url)
