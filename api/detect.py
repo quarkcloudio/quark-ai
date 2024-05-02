@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify
-from service.detect.detect import Detect
+from service.detect import Detect
 
 # 创建蓝图
 detect_bp = Blueprint('detect', __name__)

@@ -19,9 +19,9 @@ class Detect:
                     batch_size=1,
                     max_epochs=1,
                     num_classes=1, # 自定义数据中的类别数
-                    train_image_dir='./datasets/detect/data', # 训练图片路径
-                    train_ann='./datasets/detect/trainval.json', # 训练标注文件路径
-                    work_dir='./workdirs',
+                    train_image_dir='./data/datasets/detect/data', # 训练图片路径
+                    train_ann='./data/datasets/detect/trainval.json', # 训练标注文件路径
+                    work_dir='./data/models/detect',
                 )
         trainer = build_trainer(name=Trainers.tinynas_damoyolo, default_args=kwargs)
         trainer.train()
